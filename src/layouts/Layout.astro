@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "SolarROI helps solar contractors generate branded, NREL-backed proposals in minutes — right from their iPhone.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#FF6B2B" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://solarroi.app" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+      crossorigin
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body class="bg-white text-solar-ink">
+    <slot />
+    <footer class="border-t border-solar-hairline mt-24">
+      <div
+        class="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-solar-muted"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="inline-block w-2.5 h-2.5 rounded-full bg-solar-orange"
+            aria-hidden="true"></span>
+          <span class="font-semibold text-solar-ink">SolarROI</span>
+          <span>&copy; {new Date().getFullYear()}</span>
+        </div>
+        <nav class="flex flex-wrap items-center gap-x-6 gap-y-2">
+          <a href="/" class="hover:text-solar-ink">Home</a>
+          <a href="/privacy" class="hover:text-solar-ink">Privacy</a>
+          <a href="/terms" class="hover:text-solar-ink">Terms</a>
+          <a
+            href="mailto:support@solarroi.app"
+            class="hover:text-solar-ink">support@solarroi.app</a
+          >
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

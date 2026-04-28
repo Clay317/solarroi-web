@@ -1,0 +1,170 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Privacy Policy — SolarROI"
+  description="How SolarROI handles your data. Plain English."
+>
+  <header class="border-b border-solar-hairline">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 font-bold tracking-tight">
+        <span
+          class="inline-block w-3 h-3 rounded-sm bg-solar-orange"
+          aria-hidden="true"></span>
+        SolarROI
+      </a>
+      <nav class="flex items-center gap-6 text-sm text-solar-muted">
+        <a href="/" class="hover:text-solar-ink">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <p
+      class="text-xs font-semibold tracking-[0.18em] uppercase text-solar-orange mb-3"
+    >
+      Privacy Policy
+    </p>
+    <h1 class="text-4xl font-extrabold tracking-tight">
+      We keep it simple.
+    </h1>
+    <p class="mt-3 text-solar-muted">
+      Last updated: April 26, 2026
+    </p>
+
+    <div class="prose mt-12 text-solar-ink leading-relaxed space-y-6 text-[17px]">
+      <p>
+        SolarROI is an iOS app that helps solar contractors generate proposals
+        for their customers. This page explains, in plain English, what data
+        the app handles and where it goes. If anything below is unclear,
+        email <a class="text-solar-orange underline" href="mailto:support@solarroi.app">support@solarroi.app</a>
+        and we'll fix it.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">What we don't do</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>No accounts. SolarROI does not require you to sign up or sign in.</li>
+        <li>No analytics SDKs, no third-party trackers, no advertising networks.</li>
+        <li>No data is sent to SolarROI's own servers — we don't run any.</li>
+        <li>No customer data is uploaded for marketing or any other purpose.</li>
+      </ul>
+
+      <h2 class="text-xl font-bold mt-10">Data stored on your device</h2>
+      <p>
+        Everything you enter into SolarROI is stored locally on your iPhone or
+        iPad. It is not synced to a SolarROI cloud, because there is no
+        SolarROI cloud. Specifically:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>
+          <strong>Your contractor profile</strong> — company name, contact
+          name, license number, phone, email, website, and business address.
+          Stored in iOS user defaults.
+        </li>
+        <li>
+          <strong>Your custom watermark image</strong> (Pro feature), if
+          you've uploaded one. Stored in iOS user defaults.
+        </li>
+        <li>
+          <strong>Your customer projects</strong> — customer name and contact
+          info, customer address, system size, tilt, azimuth, roof type,
+          module type, financial inputs, and the production / financial
+          results SolarROI calculates. Saved as JSON files in the app's
+          private Documents directory.
+        </li>
+        <li>
+          <strong>Your default rates</strong> — cost per watt, utility rate,
+          escalator, ITC percent, default losses.
+        </li>
+      </ul>
+      <p>
+        This data is included in standard iOS / iCloud device backups (because
+        Apple backs up app data by default). It never leaves your device
+        through SolarROI.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Data sent to third parties</h2>
+      <p>
+        To produce a proposal, SolarROI talks to two services on your behalf.
+        Both are well-known and operate under their own privacy policies.
+      </p>
+
+      <h3 class="font-semibold mt-6">1. Apple — geocoding</h3>
+      <p>
+        When you enter a customer address, SolarROI uses Apple's CLGeocoder
+        (the same component Apple Maps uses) to convert that address into
+        latitude and longitude. This is an iOS system service. The address
+        text is sent to Apple. SolarROI does not control how Apple processes
+        these requests — see Apple's privacy policy for details.
+      </p>
+
+      <h3 class="font-semibold mt-6">2. NREL — solar production estimates</h3>
+      <p>
+        SolarROI calls the National Renewable Energy Laboratory's PVWatts v8
+        API (<code>developer.nrel.gov</code>) to estimate how much electricity
+        a given system will produce at a given site. We send NREL:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>The latitude and longitude of the project site</li>
+        <li>System capacity in kW, tilt, azimuth, array type, module type, and losses</li>
+        <li>An NREL API key</li>
+      </ul>
+      <p>
+        Customer names, addresses, contact info, and pricing are
+        <strong>not</strong> sent to NREL — only the numeric site and system
+        parameters needed for the simulation. By default the app uses NREL's
+        public <code>DEMO_KEY</code>; if you provide your own NREL API key in
+        Settings, it is stored locally on your device and used in place of
+        <code>DEMO_KEY</code>.
+      </p>
+
+      <h3 class="font-semibold mt-6">3. Apple — subscription processing</h3>
+      <p>
+        SolarROI Pro ($4.99/month) is sold through Apple's StoreKit. Apple
+        handles the entire transaction: payment method, billing, tax, and
+        renewals. SolarROI never sees your payment information. We only
+        receive a signal from Apple confirming whether your subscription is
+        currently active.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">PDFs you generate</h2>
+      <p>
+        When you export a PDF proposal, that file is generated entirely
+        on-device and handed to iOS's standard share sheet. Where it goes
+        next — Mail, Messages, AirDrop, Files, a third-party app — is up to
+        you. SolarROI does not retain a copy beyond the project record on
+        your device.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Children</h2>
+      <p>
+        SolarROI is a tool for professional solar contractors. It is not
+        directed at children under 13, and we do not knowingly collect
+        information from children.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Your control</h2>
+      <p>
+        Because data lives on your device, you control it. Delete a project
+        from inside SolarROI to remove it. Delete the app to remove
+        everything (contractor profile, projects, watermark, settings).
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Changes to this policy</h2>
+      <p>
+        If we change how the app handles data, we'll update this page and
+        bump the date at the top. For material changes, we'll also note them
+        in the App Store release notes.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Contact</h2>
+      <p>
+        Questions? Email
+        <a class="text-solar-orange underline" href="mailto:support@solarroi.app"
+          >support@solarroi.app</a
+        >.
+      </p>
+    </div>
+  </main>
+</Layout>

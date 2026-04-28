@@ -1,0 +1,288 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="SolarROI — Branded solar proposals from your iPhone">
+  <header
+    class="border-b border-solar-hairline bg-white/80 backdrop-blur sticky top-0 z-10"
+  >
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 font-bold tracking-tight">
+        <span
+          class="inline-block w-3 h-3 rounded-sm bg-solar-orange"
+          aria-hidden="true"></span>
+        SolarROI
+      </a>
+      <nav class="flex items-center gap-6 text-sm text-solar-muted">
+        <a href="#features" class="hover:text-solar-ink">Features</a>
+        <a href="#demo" class="hover:text-solar-ink">Demo</a>
+        <a href="#waitlist" class="hover:text-solar-ink">Waitlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="max-w-6xl mx-auto px-6 pt-20 pb-16 sm:pt-28 sm:pb-24">
+      <p
+        class="text-xs font-semibold tracking-[0.18em] uppercase text-solar-orange mb-4"
+      >
+        For solar contractors
+      </p>
+      <h1
+        class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.05] max-w-3xl"
+      >
+        Branded solar proposals,
+        <span class="text-solar-orange">in minutes.</span>
+      </h1>
+      <p class="mt-6 text-lg text-solar-muted max-w-2xl leading-relaxed">
+        SolarROI turns an address and a few system specs into a polished,
+        NREL-backed PDF proposal — complete with production estimates, ITC, and
+        payback. Built for the field, runs on your iPhone.
+      </p>
+
+      <!--
+        TODO (App Store launch): replace this email form with the official
+        App Store badge once SolarROI is live.
+        e.g. <a href="https://apps.apple.com/app/idXXXXXXXXX">
+               <img src="/app-store-badge.svg" alt="Download on the App Store" />
+             </a>
+      -->
+      <div id="waitlist" class="mt-10 max-w-xl">
+        <form
+          action="https://buttondown.email/api/emails/embed-subscribe/SOLARROI_USERNAME"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://buttondown.email/SOLARROI_USERNAME', 'popupwindow')"
+          class="flex flex-col sm:flex-row gap-3"
+        >
+          <!-- TODO: replace SOLARROI_USERNAME (in both action and onsubmit) with the real Buttondown handle once the account exists. -->
+          <label for="bd-email" class="sr-only">Email address</label>
+          <input
+            id="bd-email"
+            type="email"
+            name="email"
+            required
+            placeholder="you@yoursolarco.com"
+            class="flex-1 h-12 px-4 rounded-lg border border-solar-hairline focus:outline-none focus:ring-2 focus:ring-solar-orange focus:border-solar-orange bg-white"
+          />
+          <button
+            type="submit"
+            class="h-12 px-6 rounded-lg bg-solar-orange text-white font-semibold hover:opacity-90 transition"
+          >
+            Join the waitlist
+          </button>
+        </form>
+        <div class="mt-4 flex items-center gap-4 text-sm text-solar-muted">
+          <a
+            href="#demo"
+            class="inline-flex items-center gap-1.5 hover:text-solar-ink"
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+            Watch demo
+          </a>
+          <span class="text-solar-hairline">·</span>
+          <span>No spam. Launch updates only.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="bg-solar-orange/[0.04] border-y border-solar-hairline">
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <p
+          class="text-xs font-semibold tracking-[0.18em] uppercase text-solar-orange mb-3"
+        >
+          What it does
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight max-w-2xl">
+          Everything a contractor needs to quote a job — nothing they don't.
+        </h2>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="rounded-xl border border-solar-hairline bg-white p-6 flex flex-col"
+          >
+            <div
+              class="w-10 h-10 rounded-lg bg-solar-orange/10 text-solar-orange flex items-center justify-center mb-4 font-semibold"
+            >
+              kW
+            </div>
+            <h3 class="font-semibold text-lg">PVWatts-backed estimates</h3>
+            <p class="mt-2 text-sm text-solar-muted leading-relaxed">
+              Production numbers come straight from NREL's PVWatts v8 — the
+              same engine the industry trusts. Address geocoding happens
+              on-device via Apple Maps.
+            </p>
+          </div>
+
+          <div
+            class="rounded-xl border border-solar-hairline bg-white p-6 flex flex-col"
+          >
+            <div
+              class="w-10 h-10 rounded-lg bg-solar-orange/10 text-solar-orange flex items-center justify-center mb-4 font-semibold"
+            >
+              PDF
+            </div>
+            <h3 class="font-semibold text-lg">Branded PDF proposals</h3>
+            <p class="mt-2 text-sm text-solar-muted leading-relaxed">
+              Generate a clean, client-ready proposal with your company info,
+              system design, ITC, and 25-year savings — ready to AirDrop or
+              email.
+            </p>
+          </div>
+
+          <div
+            class="rounded-xl border border-solar-hairline bg-white p-6 flex flex-col"
+          >
+            <div
+              class="w-10 h-10 rounded-lg bg-solar-orange/10 text-solar-orange flex items-center justify-center mb-4 font-semibold"
+            >
+              ☰
+            </div>
+            <h3 class="font-semibold text-lg">Project library</h3>
+            <p class="mt-2 text-sm text-solar-muted leading-relaxed">
+              Every project is saved locally on your device. Pick up where you
+              left off, duplicate a job, or iterate on a quote without
+              starting over.
+            </p>
+          </div>
+
+          <div
+            class="rounded-xl border border-solar-hairline bg-white p-6 flex flex-col"
+          >
+            <div
+              class="w-10 h-10 rounded-lg bg-solar-orange/10 text-solar-orange flex items-center justify-center mb-4 font-semibold"
+            >
+              ★
+            </div>
+            <h3 class="font-semibold text-lg">Pro: $4.99/mo</h3>
+            <p class="mt-2 text-sm text-solar-muted leading-relaxed">
+              Unlimited projects · Watermark-free PDFs · upload your own
+              watermark image. Free tier supports 3 projects with a SolarROI
+              watermark.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO -->
+    <section id="demo" class="max-w-6xl mx-auto px-6 py-20">
+      <p
+        class="text-xs font-semibold tracking-[0.18em] uppercase text-solar-orange mb-3"
+      >
+        See it in action
+      </p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+        From address to proposal in under two minutes.
+      </h2>
+
+      <div
+        class="mt-10 rounded-2xl overflow-hidden border border-solar-hairline bg-solar-ink/[0.03] aspect-video flex items-center justify-center relative"
+      >
+        {/* TODO: drop the recorded screen capture into /public/demo.mp4
+            and (optionally) /public/demo-poster.jpg. The <video> tag below
+            will pick them up automatically. The onerror handler reveals the
+            "Demo coming soon" overlay if /demo.mp4 isn't there yet. */}
+        <video
+          class="w-full h-full object-cover"
+          controls
+          playsinline
+          preload="metadata"
+          poster="/demo-poster.jpg"
+          onerror="this.style.display='none'; document.getElementById('demo-fallback').style.display='flex';"
+        >
+          <source src="/demo.mp4" type="video/mp4" />
+        </video>
+        <div
+          id="demo-fallback"
+          class="absolute inset-0 hidden flex-col items-center justify-center text-center px-6 text-solar-muted"
+        >
+          <div
+            class="w-14 h-14 rounded-full bg-solar-orange/10 text-solar-orange flex items-center justify-center mb-4"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+          </div>
+          <p class="font-semibold text-solar-ink">Demo coming soon</p>
+          <p class="text-sm mt-1">
+            We're polishing the walkthrough. Join the waitlist to get notified.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section class="border-t border-solar-hairline">
+      <div class="max-w-6xl mx-auto px-6 py-20 grid gap-12 lg:grid-cols-2 items-start">
+        <div>
+          <p
+            class="text-xs font-semibold tracking-[0.18em] uppercase text-solar-orange mb-3"
+          >
+            Who it's for
+          </p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+            Built for solar contractors who close deals on the roof — not at a
+            desk.
+          </h2>
+        </div>
+        <div class="text-solar-muted leading-relaxed space-y-4 text-lg">
+          <p>
+            If you're an installer, sales rep, or independent contractor sick
+            of bouncing between spreadsheets, web tools, and a desktop CAD
+            package just to hand a homeowner a number — SolarROI is for you.
+          </p>
+          <p>
+            Set your contractor profile once (company, license, contact, logo)
+            and every proposal you generate is automatically branded as
+            yours. Inputs are simple: address, system size, tilt, azimuth,
+            roof type. The math and the formatting are handled.
+          </p>
+          <p class="text-solar-ink font-medium">
+            One person. One iPhone. One proposal in the homeowner's inbox
+            before you leave the driveway.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="max-w-6xl mx-auto px-6 py-20">
+      <div
+        class="rounded-2xl bg-solar-ink text-white p-10 sm:p-14 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+      >
+        <div>
+          <h3 class="text-2xl sm:text-3xl font-bold tracking-tight">
+            Be first in line when SolarROI ships.
+          </h3>
+          <p class="mt-2 text-white/70">
+            Coming to the App Store soon. Join the waitlist for launch
+            pricing.
+          </p>
+        </div>
+        <a
+          href="#waitlist"
+          class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-solar-orange text-white font-semibold hover:opacity-90 transition whitespace-nowrap"
+        >
+          Join the waitlist
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
