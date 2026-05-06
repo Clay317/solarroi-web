@@ -2,7 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Terms of Service — SolarROI">
+<Layout
+  title="Terms of Service — SolarROI"
+  description="The rules for using the SolarROI iOS app and SolarROI Pro subscription."
+>
   <header class="border-b border-solar-hairline">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="/" class="flex items-center gap-2 font-bold tracking-tight">
@@ -18,21 +21,207 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </header>
 
-  <main class="max-w-3xl mx-auto px-6 py-24 text-center">
+  <main class="max-w-3xl mx-auto px-6 py-16">
     <p
       class="text-xs font-semibold tracking-[0.18em] uppercase text-solar-orange mb-3"
     >
       Terms of Service
     </p>
-    <h1 class="text-4xl font-extrabold tracking-tight">Coming soon</h1>
-    <p class="mt-4 text-solar-muted leading-relaxed max-w-xl mx-auto">
-      We're finalizing our terms of service ahead of launch. In the meantime,
-      see our <a href="/privacy" class="text-solar-orange underline"
-        >privacy policy</a
-      > or reach us at <a
-        href="mailto:support@solarroi.app"
-        class="text-solar-orange underline">support@solarroi.app</a
-      >.
+    <h1 class="text-4xl font-extrabold tracking-tight">
+      The basics, in plain English.
+    </h1>
+    <p class="mt-3 text-solar-muted">
+      Last updated: May 5, 2026
     </p>
+
+    <div class="prose mt-12 text-solar-ink leading-relaxed space-y-6 text-[17px]">
+      <p>
+        These terms govern your use of the SolarROI iOS app ("the app") and
+        the SolarROI Pro subscription. By installing or using the app, you
+        agree to them. If you don't agree, please uninstall the app.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Who can use SolarROI</h2>
+      <p>
+        SolarROI is built for solar contractors and sales professionals. You
+        must be at least 18 years old and able to enter into a binding
+        contract to use it. The app is not directed at children.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">License</h2>
+      <p>
+        We grant you a personal, non-transferable, non-exclusive license to
+        install and use the app on devices you own or control, subject to
+        these terms and the Apple Media Services Terms (the standard "EULA"
+        you accept when you install any App Store app). You may not copy,
+        modify, decompile, reverse-engineer, or redistribute the app or its
+        components.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">SolarROI Pro subscription</h2>
+      <p>
+        SolarROI is free to use with a small project limit. SolarROI Pro is
+        an auto-renewing subscription that unlocks unlimited projects,
+        watermark-free PDFs, and custom watermarks.
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>
+          <strong>Price and period.</strong> SolarROI Pro is currently
+          $4.99 USD per month. Pricing in other regions is shown by Apple
+          at the time of purchase and may vary.
+        </li>
+        <li>
+          <strong>Billing.</strong> Payment is charged to your Apple ID at
+          confirmation of purchase. Apple processes the entire transaction;
+          we never see your payment details.
+        </li>
+        <li>
+          <strong>Auto-renewal.</strong> The subscription renews
+          automatically for the same period at the same price unless you
+          cancel at least 24 hours before the end of the current period.
+          Apple charges your Apple ID for the renewal.
+        </li>
+        <li>
+          <strong>Managing or cancelling.</strong> You can manage or cancel
+          your subscription anytime in <em>Settings → [your Apple ID]
+          → Subscriptions</em>. Cancelling stops future renewals; the
+          current period continues until it expires.
+        </li>
+        <li>
+          <strong>Refunds.</strong> Refunds are handled by Apple under
+          their refund policy. We can't issue refunds directly. To request
+          one, visit
+          <a
+            class="text-solar-orange underline"
+            href="https://reportaproblem.apple.com"
+            >reportaproblem.apple.com</a
+          >.
+        </li>
+        <li>
+          <strong>Price changes.</strong> If we change the subscription
+          price, Apple will notify you and ask you to consent before the
+          new price takes effect.
+        </li>
+      </ul>
+
+      <h2 class="text-xl font-bold mt-10">Estimates, not advice</h2>
+      <p>
+        SolarROI produces <strong>estimates</strong>. The financial,
+        production, and savings figures the app calculates are modeled
+        projections — they are not a guarantee of actual system
+        performance, savings, payback, tax outcome, or system cost. Many
+        real-world factors (weather, shading, roof condition, utility rate
+        changes, installation specifics, tax situation) affect actual
+        results. SolarROI is not a substitute for professional engineering,
+        financial, tax, or legal advice. Before relying on a SolarROI
+        proposal for a customer commitment, verify the inputs and consult
+        the appropriate qualified professional.
+      </p>
+      <p>
+        You are responsible for the accuracy of the data you enter and for
+        anything you communicate to your customers based on the app's
+        output.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Acceptable use</h2>
+      <p>You agree not to:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>
+          Use the app for any unlawful purpose, or to deceive or defraud
+          your customers.
+        </li>
+        <li>
+          Misrepresent the app's output as a binding offer, contract,
+          guarantee, or as the work of a licensed engineer or financial
+          advisor when it isn't.
+        </li>
+        <li>
+          Attempt to interfere with the app, the NREL PVWatts service, or
+          Apple's services through automated abuse, scraping at scale, or
+          circumvention of subscription gating.
+        </li>
+      </ul>
+
+      <h2 class="text-xl font-bold mt-10">Third-party services</h2>
+      <p>
+        The app integrates with two services described in our
+        <a class="text-solar-orange underline" href="/privacy">privacy policy</a>:
+        Apple (for geocoding addresses and processing the subscription)
+        and the National Renewable Energy Laboratory's PVWatts v8 API
+        (for production estimates). Your use of those features is also
+        subject to the providers' own terms. We are not responsible for
+        outages, errors, or changes in those upstream services.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Intellectual property</h2>
+      <p>
+        The SolarROI app, its name, logo, design, and source code are
+        owned by us and protected by copyright and trademark law. Your
+        contractor profile, customer projects, and any content you create
+        with the app remain yours.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Disclaimers and liability</h2>
+      <p>
+        The app is provided "as is" and "as available," without warranties
+        of any kind, express or implied, including merchantability,
+        fitness for a particular purpose, or non-infringement. To the
+        fullest extent permitted by law, we are not liable for indirect,
+        incidental, special, consequential, or punitive damages, or for
+        lost profits, lost revenue, or lost business arising out of or
+        related to your use of the app — including any reliance on the
+        app's estimates.
+      </p>
+      <p>
+        Some jurisdictions don't allow certain warranty or liability
+        limitations, so some of the above may not apply to you. In that
+        case, our liability is limited to the maximum extent permitted by
+        applicable law.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Termination</h2>
+      <p>
+        You may stop using the app and cancel SolarROI Pro at any time. We
+        may suspend or terminate access if you violate these terms. On
+        termination, the license above ends and you must stop using the
+        app, but the disclaimers and liability sections survive.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Changes to these terms</h2>
+      <p>
+        If we materially change these terms, we'll update this page and
+        bump the date at the top. Continued use of the app after a change
+        means you accept the updated terms.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Relationship to Apple's terms</h2>
+      <p>
+        SolarROI is distributed exclusively through Apple's App Store. Your
+        use of the app is also governed by Apple's
+        <a
+          class="text-solar-orange underline"
+          href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+          >Licensed Application End User License Agreement</a
+        >
+        ("Apple's standard EULA") and Apple's
+        <a
+          class="text-solar-orange underline"
+          href="https://www.apple.com/legal/internet-services/itunes/"
+          >Media Services Terms</a
+        >. Where these terms are silent, Apple's standard EULA applies.
+        Where these terms conflict with Apple's standard EULA on a topic
+        Apple addresses (such as the scope of license or the manner in
+        which the app is distributed), Apple's terms control as required
+        by Apple's developer agreement.
+      </p>
+
+      <h2 class="text-xl font-bold mt-10">Contact</h2>
+      <p>
+        Questions about these terms? Email
+        <a class="text-solar-orange underline" href="mailto:support@solarroi.app"
+          >support@solarroi.app</a
+        >.
+      </p>
+    </div>
   </main>
 </Layout>
